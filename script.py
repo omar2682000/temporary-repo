@@ -17,7 +17,7 @@ users_conf = """
 <user username="admin" password="admin" roles="manager-gui,manager-script"/>
 """
 tomcat_users = open("/var/lib/tomcat9/conf/tomcat-users.xml", "rt")
-text = server_config.readlines()
+text = tomcat_users.readlines()
 text.insert(max(0, len(text) - 1), text = server_config.readlines())
 tomcat_users.close()
 
